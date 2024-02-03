@@ -1,5 +1,6 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
+const detailsButtons = document.querySelectorAll(".buttonDetails")
 
 const maxRecords = 151
 const limit = 10
@@ -45,3 +46,11 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+detailsButtons.forEach(button => {
+    console.log('oi')
+    detailsButtons.addEventListener('click', () =>{
+        console.log(`Clicou o botão ${button.id}`);
+    })
+});
+    
